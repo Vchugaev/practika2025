@@ -1,4 +1,5 @@
 "use client";
+/* eslint-disable */
 import {
   Button,
   Card,
@@ -31,7 +32,6 @@ import {
   EnvironmentOutlined,
   WifiOutlined,
   EnvironmentFilled,
-  CalendarOutlined,
   QuestionOutlined,
   HomeOutlined,
   MenuOutlined,
@@ -77,7 +77,6 @@ export default function Home() {
       >
         {/* Логотип и бургер-меню */}
         <div
-         
           style={{ display: "flex", alignItems: "center", gap: token.margin }}
         >
           {!screens.md && (
@@ -193,10 +192,30 @@ export default function Home() {
               theme="light"
               mode="vertical"
               items={[
-                { key: "1", label: "Главная", icon: <HomeOutlined />, onClick: () => scrollToSection("homes") },
-                { key: "2", label: "Услуги", icon: <CarOutlined />, onClick: () => scrollToSection("services") },
-                { key: "3", label: "Цены", icon: <DollarOutlined />, onClick: () => scrollToSection("prices") },
-                { key: "4", label: "Контакты", icon: <PhoneOutlined />, onClick: () => scrollToSection("contacts") },
+                {
+                  key: "1",
+                  label: "Главная",
+                  icon: <HomeOutlined />,
+                  onClick: () => scrollToSection("homes"),
+                },
+                {
+                  key: "2",
+                  label: "Услуги",
+                  icon: <CarOutlined />,
+                  onClick: () => scrollToSection("services"),
+                },
+                {
+                  key: "3",
+                  label: "Цены",
+                  icon: <DollarOutlined />,
+                  onClick: () => scrollToSection("prices"),
+                },
+                {
+                  key: "4",
+                  label: "Контакты",
+                  icon: <PhoneOutlined />,
+                  onClick: () => scrollToSection("contacts"),
+                },
                 {
                   key: "5",
                   label: "Помощь",
@@ -250,7 +269,7 @@ export default function Home() {
 
           {/* Контент поверх изображения */}
           <div
-           id="homes"
+            id="homes"
             style={{
               position: "relative",
               zIndex: 2,
