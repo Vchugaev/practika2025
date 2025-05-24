@@ -8,4 +8,6 @@
   text-decoration: none;
   border: none;
   outline: none;
+  -webkit-tap-highlight-color: transparent;
+  tap-highlight-color: transparent;
 }
