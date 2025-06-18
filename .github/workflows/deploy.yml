@@ -1,0 +1,30 @@
+name: Deploy to Ubuntu
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install dependencies and build (optional)
+        run: |
+          npm install
+          npm run build  # Если у тебя есть сборка (например, для фронта)
+
+      - name: Deploy via SSH
+        uses: appleboy/ssh-action@v1
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_KEY }}
+          script: |
+            cd /var/www/myproject
+            git pull origin main
+            npm install --production
+            systemctl restart myapp
