@@ -1,4 +1,4 @@
-name: Deploy to Ubuntu
+name: Deploy Next.js to Ubuntu
 
 on:
   push:
@@ -12,10 +12,16 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Install dependencies and build (optional)
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install and Build
         run: |
-          npm install
-          npm run build  # Если у тебя есть сборка (например, для фронта)
+          npm ci
+          npm run build
 
       - name: Deploy via SSH
         uses: appleboy/ssh-action@v1
@@ -23,8 +29,12 @@ jobs:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_KEY }}
+          envs: 'NODE_ENV=production'
           script: |
             cd /var/www/myproject
-            git pull origin main
-            npm install --production
-            systemctl restart myapp
+            git fetch origin main
+            git reset --hard origin/main
+            npm ci --omit=dev
+            npm run build
+            sudo systemctl daemon-reload
+            sudo systemctl restart myapp
