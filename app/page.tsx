@@ -243,8 +243,8 @@ export default function Home() {
           }}
         >
           {/* Фоновое изображение */}
-          <Image
-            src="/wash2.gif" // Укажите правильный путь к вашему изображению
+          {/* <Image
+            src="/wash.gif" // Укажите правильный путь к вашему изображению
             alt="Фон автомойки"
             fill
             style={{
@@ -252,7 +252,7 @@ export default function Home() {
               zIndex: 0,
             }}
             priority
-          />
+          /> */}
 
           {/* Затемнение фона для лучшей читаемости текста */}
           <div
@@ -262,7 +262,6 @@ export default function Home() {
               left: 0,
               right: 0,
               bottom: 0,
-              backgroundColor: "rgba(0, 0, 0, 0.5)",
               zIndex: 1,
             }}
           />
@@ -283,12 +282,12 @@ export default function Home() {
               padding: "0 24px",
             }}
           >
-            <Title level={2} style={{ color: "white" }}>
-              Автомойка „Чисто™“ — быстро, дешево, без царапин (почти)
+            <Title level={2} style={{ color: "black" }}>
+              Автомойка „Чисто™“ — быстро, дешево, без царапинs
             </Title>
-            <Paragraph style={{ color: "white", maxWidth: "800px" }}>
+            <Paragraph style={{ color: "black", maxWidth: "800px" }}>
               Моем машины с 2025 года. Если после нас останутся царапины — это
-              не мы (наверное).
+              не мы.
             </Paragraph>
             <Button type="primary" size="large">
               Записаться
