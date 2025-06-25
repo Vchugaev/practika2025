@@ -1,0 +1,343 @@
+.layout {
+  min-height: 100vh;
+  background: #0a0a0a;
+}
+
+/* Десктопное меню */
+.sider {
+  background: #141414 !important;
+  border-right: 1px solid #333;
+  padding: 24px 0;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  height: 100vh;
+  z-index: 1;
+}
+
+.userPanel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 24px 24px;
+  text-align: center;
+}
+
+.avatar {
+  background: #1890ff;
+  margin-bottom: 16px;
+}
+
+.userName {
+  color: #fff !important;
+  margin-bottom: 4px !important;
+}
+
+.menu {
+  flex: 1;
+  background: transparent !important;
+  border-right: none !important;
+}
+
+.logoutButton {
+  margin: 16px 24px 0;
+  color: #ff4d4f;
+  border-color: #ff4d4f;
+}
+
+.logoutButton:hover {
+  color: #ff7875 !important;
+  border-color: #ff7875 !important;
+}
+
+/* Мобильный хедер */
+.mobileHeader {
+  background: #141414 !important;
+  border-bottom: 1px solid #333;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  height: 64px;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+}
+
+.menuButton {
+  color: #fff !important;
+  font-size: 18px;
+  width: 48px;
+  height: 48px;
+  margin-right: 12px;
+}
+
+.mobileTitle {
+  color: #fff !important;
+  margin-bottom: 0 !important;
+}
+
+/* Мобильное меню */
+.mobileDrawer .ant-drawer-content {
+  background: #141414 !important;
+}
+
+.mobileDrawer .ant-drawer-header {
+  background: #141414 !important;
+  border-bottom: 1px solid #333 !important;
+}
+
+.drawerHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.mobileMenu {
+  background: transparent !important;
+  border-right: none !important;
+}
+
+.mobileMenu .ant-menu-item {
+  height: 56px !important;
+  line-height: 56px !important;
+  margin: 4px 0 !important;
+  font-size: 16px;
+}
+
+.mobileLogoutButton {
+  color: #ff4d4f;
+  border-color: #ff4d4f;
+  margin-top: 24px;
+  height: 48px;
+}
+
+/* Основной контент */
+.contentLayout {
+  background: #0a0a0a;
+  margin-left: 250px; /* Отступ для десктопного меню */
+}
+
+.content {
+  background: #141414;
+  padding: 24px;
+  border-radius: 8px;
+  min-height: calc(100vh - 48px);
+}
+
+.sectionTitle {
+  color: #fff !important;
+}
+
+/* Адаптация под мобильные */
+@media (max-width: 767px) {
+  .contentLayout {
+    margin-left: 0;
+    padding-top: 64px; /* Для мобильного хедера */
+  }
+  
+  .content {
+    padding: 16px;
+    min-height: calc(100vh - 64px);
+    border-radius: 0;
+  }
+}
+
+/* Стили для профиля */
+.statsRow {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+  gap: 16px;
+}
+
+.statCard {
+  background: #1a1a1a;
+  border: 1px solid #333;
+  flex: 1;
+  min-width: 200px;
+  transition: all 0.3s;
+}
+
+.statCard:hover {
+  border-color: #1890ff;
+  transform: translateY(-2px);
+}
+
+.infoCard {
+  background: #1a1a1a;
+  border: 1px solid #333;
+  transition: all 0.3s;
+}
+
+.infoCard:hover {
+  border-color: #1890ff;
+}
+
+.infoRow {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px dashed #333;
+}
+
+.infoRow:last-child {
+  border-bottom: none;
+}
+
+/* Стили для истории заказов */
+.ordersContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 16px;
+}
+
+.orderCard {
+  background: #1a1a1a;
+  border: 1px solid #333;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  animation: fadeIn 0.5s ease forwards;
+  opacity: 0;
+}
+
+.orderCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  border-color: #1890ff;
+}
+
+.orderCard:nth-child(1) { animation-delay: 0.1s; }
+.orderCard:nth-child(2) { animation-delay: 0.2s; }
+.orderCard:nth-child(3) { animation-delay: 0.3s; }
+
+.orderHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.orderId {
+  color: #1890ff;
+}
+
+.orderDivider {
+  margin: 12px 0;
+  background: #333;
+}
+
+.orderBody {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.serviceInfo {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.serviceIcon {
+  font-size: 24px;
+  color: #1890ff;
+  padding: 12px;
+  background: rgba(24, 144, 255, 0.1);
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.serviceName {
+  font-size: 16px;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.orderDetails {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.detailItem {
+  display: flex;
+  flex-direction: column;
+}
+
+.price {
+  color: #52c41a;
+  font-size: 18px;
+}
+
+.orderFooter {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.actionButton {
+  color: #1890ff;
+  padding: 0;
+}
+
+
+/* Бонусная карта */
+.bonusCard {
+  background: #1a1a1a;
+  border: 1px solid #333;
+  text-align: center;
+  transition: all 0.3s;
+}
+
+.bonusCard:hover {
+  border-color: #faad14;
+}
+
+/* Анимации */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Загрузка */
+.loadingContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #0a0a0a;
+}
+
+.loadingContent {
+  background: #1a1a1a;
+  padding: 40px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+/* Адаптация для маленьких экранов */
+@media (max-width: 575.98px) {
+  .ordersContainer {
+    grid-template-columns: 1fr;
+  }
+  
+  .statsRow {
+    flex-direction: column;
+  }
+  
+  .orderFooter {
+    flex-direction: column;
+  }
+  
+  .actionButton {
+    width: 100%;
+    text-align: left;
+  }
+  
+  .detailItem {
+    grid-column: span 2;
+  }
+}

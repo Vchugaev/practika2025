@@ -1,0 +1,59 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 16px;
+  background: rgb(3, 3, 3)414;
+}
+
+.card {
+  width: 100%;
+  max-width: 480px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border: none;
+}
+
+.header {
+  text-align: center;
+  width: 100%;
+}
+
+.logoIcon {
+  font-size: 32px;
+}
+
+.title {
+  color: var(--ant-color-text);
+  margin-bottom: 0 !important;
+}
+
+.divider {
+  margin: 16px 0;
+}
+
+.form {
+  margin-top: 24px;
+}
+
+.submitButton {
+  margin-top: 8px;
+}
+
+.footer {
+  text-align: center;
+  width: 100%;
+}
+
+.link {
+  color: var(--ant-color-primary);
+}
+
+.link:hover {
+  color: var(--ant-color-primary-hover);
+}
+
+.helpText {
+  font-size: 14px;
+}

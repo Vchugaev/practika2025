@@ -1,0 +1,186 @@
+.footer {
+  background: #141414;
+  padding: 0;
+  color: rgba(255, 255, 255, 0.85);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+}
+
+.footerContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 64px 24px 24px;
+}
+
+.topFooter {
+  margin-bottom: 40px;
+}
+
+.footerTitle {
+  color: #fff !important;
+  font-weight: 600;
+  margin-bottom: 20px !important;
+  display: flex;
+  align-items: center;
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.contactIcon {
+  color: #13c2c2;
+  margin-right: 10px;
+  font-size: 16px;
+}
+
+.footerLink {
+  display: block;
+  margin-bottom: 12px;
+  color: rgba(255, 255, 255, 0.65) !important;
+  transition: color 0.3s;
+}
+
+.footerLink:hover {
+  color: #1890ff !important;
+}
+
+.subscribeForm {
+  margin-top: 16px;
+}
+
+.subscribeInput {
+  margin-bottom: 12px;
+  background: #1a1a1a;
+  border-color: #333;
+  color: #fff;
+}
+
+.subscribeInput:focus {
+  border-color: #1890ff;
+  box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+}
+
+.subscribeButton {
+  background: #13c2c2;
+  border: none;
+  width: 100%;
+}
+
+.userSection {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.userAvatar {
+  background: #1890ff;
+  cursor: pointer;
+  margin-right: 12px;
+}
+
+.welcomeText {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.authButton {
+  margin-bottom: 16px;
+  color: #1890ff;
+  border-color: #1890ff;
+}
+
+.authLink:hover {
+  opacity: 0.8;
+}
+
+.feedbackInput {
+  background: #1a1a1a;
+  border-color: #333;
+  color: #fff;
+  margin-bottom: 12px;
+}
+
+.feedbackInput:focus {
+  border-color: #1890ff;
+  box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+}
+
+.feedbackButton {
+  color: #1890ff;
+  border-color: #1890ff;
+}
+
+.footerDivider {
+  background: rgba(255, 255, 255, 0.1);
+  margin: 24px 0;
+}
+
+.bottomFooter {
+  padding: 0 12px;
+}
+
+.copyright {
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.socialLinks {
+  font-size: 18px;
+}
+
+.socialIcon {
+  color: rgba(255, 255, 255, 0.45);
+  transition: color 0.3s;
+}
+
+.socialIcon:hover {
+  color: #1890ff;
+}
+
+.userMenu {
+  padding: 12px;
+  min-width: 160px;
+}
+
+.userName {
+  display: block;
+  margin-bottom: 12px;
+  color: #fff;
+}
+
+.logoutButton {
+  color: #ff4d4f;
+  border-color: #ff4d4f;
+}
+
+@media (max-width: 768px) {
+  .footerContent {
+    padding: 48px 16px 24px;
+  }
+  
+  .topFooter {
+    margin-bottom: 24px;
+  }
+  
+  .footerTitle {
+    margin-bottom: 16px !important;
+  }
+  
+  .contactItem, .footerLink {
+    margin-bottom: 8px;
+  }
+  
+  .userSection {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .userAvatar {
+    margin-bottom: 8px;
+    margin-right: 0;
+  }
+}
+
+
+

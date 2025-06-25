@@ -1,0 +1,164 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  height: 80px;
+  padding: 0;
+  background: #141414 !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.headerContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+}
+
+.logoText {
+  background: linear-gradient(90deg, #1890ff, #13c2c2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.logoSlogan {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.65);
+  margin-left: 12px;
+  font-weight: 400;
+}
+
+.menu {
+  flex: 1;
+  min-width: 0;
+  justify-content: center;
+  background: transparent !important;
+  border-bottom: none !important;
+  margin: 0 24px;
+}
+
+.menu .ant-menu-item {
+  font-size: 16px;
+  padding: 0 16px !important;
+  height: 80px !important;
+  line-height: 80px !important;
+  transition: all 0.3s ease;
+}
+
+.menu .ant-menu-item:hover {
+  color: #1890ff !important;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.ctaButton {
+  background: linear-gradient(90deg, #1890ff, #13c2c2);
+  border: none !important;
+  font-weight: 500;
+  height: 48px;
+  padding: 0 24px;
+}
+
+.phoneButton {
+  color: rgba(255, 255, 255, 0.85) !important;
+  font-weight: 500;
+}
+
+/* Мобильные стили */
+.mobileMenuButton {
+  color: #fff !important;
+  font-size: 24px !important;
+  width: 48px;
+  height: 48px;
+}
+
+.mobileDrawer .ant-drawer-content {
+  background: #1a1a1a !important;
+}
+
+.mobileDrawer .ant-drawer-header {
+  display: none;
+}
+
+.mobileMenu {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 24px 0;
+}
+
+.mobileLogo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+  padding: 0 24px;
+}
+
+.verticalMenu {
+  background: transparent !important;
+  border-right: none !important;
+  flex: 1;
+}
+
+.verticalMenu .ant-menu-item {
+  font-size: 16px !important;
+  height: 56px !important;
+  line-height: 56px !important;
+  margin: 4px 0 !important;
+  padding: 0 24px !important;
+}
+
+.verticalMenu .ant-menu-item:hover {
+  background: rgba(24, 144, 255, 0.1) !important;
+}
+
+.mobileActions {
+  padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+@media (max-width: 992px) {
+  .headerContent {
+    padding: 0 16px;
+  }
+  
+  .logoSlogan {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .logoText {
+    font-size: 20px;
+  }
+  
+  .header {
+    height: 72px;
+  }
+}
