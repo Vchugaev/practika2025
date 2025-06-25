@@ -5,7 +5,6 @@ import {
   Menu,
   Card,
   Statistic,
-  List,
   Avatar,
   Typography,
   Button,
@@ -28,14 +27,10 @@ import {
   HistoryOutlined,
   StarOutlined,
   LogoutOutlined,
-  SafetyOutlined,
   CreditCardOutlined,
   MenuOutlined,
   DeleteOutlined,
-  PlusOutlined,
-  EditOutlined,
   CheckOutlined,
-  CloseOutlined,
 } from "@ant-design/icons";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -136,7 +131,6 @@ const AccountPage = () => {
 
   const handlePasswordChange = (values: any) => {
     // Здесь должна быть логика изменения пароля
-    message.success("Пароль успешно изменен");
     setIsEditingPassword(false);
     passwordForm.resetFields();
   };
@@ -152,7 +146,6 @@ const AccountPage = () => {
     setPaymentMethods([...paymentMethods, newPayment]);
     setIsPaymentModalVisible(false);
     addPaymentForm.resetFields();
-    message.success("Способ оплаты добавлен");
   };
 
   const setDefaultPaymentMethod = (id: string) => {
@@ -162,7 +155,6 @@ const AccountPage = () => {
         isDefault: method.id === id,
       }))
     );
-    message.success("Основной способ оплаты изменен");
   };
 
   const deletePaymentMethod = (id: string) => {
@@ -170,12 +162,10 @@ const AccountPage = () => {
       paymentMethods.find((m) => m.id === id)?.isDefault &&
       paymentMethods.length > 1
     ) {
-      message.error("Нельзя удалить основной способ оплаты");
       return;
     }
 
     setPaymentMethods(paymentMethods.filter((method) => method.id !== id));
-    message.success("Способ оплаты удален");
   };
 
   const menuItems = [
